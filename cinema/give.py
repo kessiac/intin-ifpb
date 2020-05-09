@@ -10,7 +10,7 @@ class Film():
 
 class ArmazenarFilm(Film):
     def add(self):
-        conexao = sqlite3.connect('Fornecer_Film.db')
+        conexao = sqlite3.connect('fornecer_film.db')
         cursor = conexao.cursor()
         cursor.execute('INSERT INTO Fornecer_Film VALUES (?, ?, ?, ?)', (self.nome, self.diretor, self.sinopse, self.categoria))
         print('='*28)
