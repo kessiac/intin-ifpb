@@ -10,7 +10,7 @@ class Filme():
 
 class Armazem(Filme):
     def arm_filme(self):
-        conexao = sqlite3.connect('Fornecer_Film.db')
+        conexao = sqlite3.connect('fornecer_film.db')
         cursor = conexao.cursor()
         cursor.execute('INSERT INTO Cinemark VALUES (?, ?, ?, ?)', (self.sala, self.filme, self.data, self.horario))
         print('='*23)
