@@ -3,19 +3,19 @@ from contextlib import closing
 
 class Bd():
     def create_table(self):
-        conexao = sqlite3.connect('Fornecer_Film.db')
+        conexao = sqlite3.connect('fornecer_film.db')
         cursor = conexao.cursor()
-        cursor.execute('CREATE TABLE Fornecer_Film(FILME TEXT, DIRETOR TEXT, SINOPSE TEXT, CATEGORIA TEXT)')
+        cursor.execute('CREATE TABLE fornecer_film(FILME TEXT, DIRETOR TEXT, SINOPSE TEXT, CATEGORIA TEXT)')
         print('Tabela/Banco Criado(a)')
 
     def create_table2(self):
-        conexao = sqlite3.connect('Fornecer_Film.db')
+        conexao = sqlite3.connect('fornecer_film.db')
         cursor = conexao.cursor()
         cursor.execute('CREATE TABLE Cinemark(SALA INTERGE, FILME TEXT, DATA TEXT, HORARIO TEXT)')
         print('Tabela/Banco Criado(a)')
 
     def create_table3(self):
-        conexao = sqlite3.connect('Fornecer_Film.db')
+        conexao = sqlite3.connect('fornecer_film.db')
         cursor = conexao.cursor()
         cursor.execute('CREATE TABLE LOGIN(USER TEXT, KEY TEXT)')
         print('Tabela/Banco Criado(a)')
@@ -24,7 +24,7 @@ class Loginn():
     def __init__(self):
         self.user = input('User desejado: ')
         self.key = input('Key desejada: ')
-        conexao = sqlite3.connect('Fornecer_Film.db')
+        conexao = sqlite3.connect('fornecer_film.db')
         cursor = conexao.cursor()
         cursor.execute('SELECT * from LOGIN')
         resultado = cursor.fetchall()
